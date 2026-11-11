@@ -35,3 +35,5 @@ GitHub Pages n'héberge pas de serveur : les réponses sont envoyées vers un Go
 
 ## Domaine personnalisé (optionnel)
 Settings → Pages → *Custom domain*, puis ajoutez un enregistrement CNAME chez votre registraire.
+
+
