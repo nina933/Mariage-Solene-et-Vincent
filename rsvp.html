@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Répondre à l'invitation - Solène & Vincent</title>
+  <meta name="description" content="Mariage de Solène & Vincent — 3 juillet 2027">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23faf8f2' stroke='%233c5679' stroke-width='2'/%3E%3Ctext x='32' y='40' font-family='Georgia' font-size='22' fill='%233c5679' text-anchor='middle'%3ES%7CV%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header id="site-header"></header>
+<main>
+<div class="page-intro">
+  <p class="eyebrow">RSVP</p>
+  <h1>Confirmez votre présence</h1>
+  <p class="lead">Merci de nous répondre avant le 1er Juin 2027 pour nous aider dans l'organisation.</p>
+</div>
+<section>
+  <div class="rsvp-wrap">
+    <form id="rsvpForm" class="form-card">
+        <div class="field">
+          <label for="nom">Nom(s) &amp; Prénom(s)</label>
+          <input id="nom" name="nom" type="text" required>
+        </div>
+        <div class="field">
+          <label for="email">Email (requis pour la confirmation)</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="presence">Serez-vous présent(e) ?</label>
+          <select id="presence" name="presence" required><option value="">Choisissez une option</option><option value="Oui, avec joie !">Oui, avec joie !</option><option value="Non, malheureusement">Non, malheureusement</option></select>
+        </div>
+        <div class="field hidden" data-show-if="presence:Oui, avec joie !">
+          <label for="brunch">Serez-vous présent(e) au brunch du lendemain ?</label>
+          <select id="brunch" name="brunch" required><option value="">Choisissez une option</option><option value="Oui">Oui</option><option value="Non">Non</option></select>
+        </div>
+        <div class="field hidden" data-show-if="presence:Oui, avec joie !">
+          <label for="voiture">Viendrez-vous en voiture ?</label>
+          <select id="voiture" name="voiture" required><option value="">Choisissez une option</option><option value="Oui">Oui</option><option value="Non">Non</option></select>
+        </div>
+        <div class="field hidden" data-show-if="voiture:Oui">
+          <label for="places_voiture">Combien de places libres dans votre voiture ?</label>
+          <input id="places_voiture" name="places_voiture" type="number" min="0" max="8">
+        </div>
+        <div class="field hidden" data-show-if="presence:Oui, avec joie !">
+          <label for="navette">Souhaitez-vous utiliser la navette ?</label>
+          <select id="navette" name="navette" required><option value="">Choisissez une option</option><option value="Oui">Oui</option><option value="Non">Non</option></select>
+        </div>
+        <div class="field hidden" data-show-if="navette:Oui">
+          <label for="personnes_navette">Pour combien de personnes ?</label>
+          <input id="personnes_navette" name="personnes_navette" type="number" min="1" max="10">
+        </div>
+        <div class="field hidden" data-show-if="presence:Oui, avec joie !">
+          <label for="hotel">Souhaitez-vous séjourner à l'Hôtel Akena ?</label>
+          <select id="hotel" name="hotel" required><option value="">Choisissez une option</option><option value="Oui">Oui</option><option value="Non">Non</option></select>
+        </div>
+        <div class="field hidden" data-show-if="hotel:Oui">
+          <label for="tarif">Quel tarif vous conviendrait ?</label>
+          <select id="tarif" name="tarif" required><option value="">Choisissez un tarif</option><option value="Single — 79€">Single — 79€</option><option value="Double / Twin — 85€">Double / Twin — 85€</option><option value="Prestige — 99€">Prestige — 99€</option><option value="Suite — 149€">Suite — 149€</option><option value="Familiale — 155€">Familiale — 155€</option></select>
+        </div>
+        <div class="field hidden" data-show-if="presence:Oui, avec joie !">
+          <label for="chanson">Une chanson que vous aimeriez entendre le jour du mariage ?</label>
+          <input id="chanson" name="chanson" type="text">
+        </div>
+        <div class="field">
+          <label for="message">Un mot doux ou une allergie alimentaire ?</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <button type="submit" class="btn">Confirmer</button>
+        <div id="formMsg" class="form-msg" role="status"></div>
+    </form>
+  </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/main.js"></script>
+</body>
+</html>
