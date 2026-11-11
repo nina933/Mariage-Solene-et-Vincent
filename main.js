@@ -4,7 +4,7 @@
    (voir README.md, étape 3) pour recevoir les réponses RSVP
    dans un Google Sheet.
    ========================================================= */
-const RSVP_ENDPOINT = "";
+   const RSVP_ENDPOINT = "https://script.google.com/macros/s/AKfycbybUCsyY_Qj5X3Z0a2oas3VCb4jvAw4ccPpSOSMugS3r4XT7nEOVQVshp6l2SLh-lzosQ/exec";
 
 const WEDDING_DATE = new Date("2027-07-03T14:00:00+02:00");
 
