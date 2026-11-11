@@ -228,3 +228,11 @@ section { padding: 70px 16px; }
   .form-card { padding: 24px; }
   section { padding: 50px 16px; }
 }
+/* Photo d'accueil : redressement (l'original est enregistré couché) */
+.hero { container-type: size; }
+.hero-bg {
+  inset: auto;
+  top: 50%; left: 50%;
+  width: 100cqh; height: 100cqw;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
